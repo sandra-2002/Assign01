@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Stateful_Reg.dart';
+import 'Home.dart';
 
 class Login_Stateful extends StatefulWidget {
   @override
@@ -7,12 +7,15 @@ class Login_Stateful extends StatefulWidget {
 }
 
 class _Login_StatefulState extends State<Login_Stateful> {
-  final formkey=GlobalKey<FormState>();
+  String username="admin@gmail.com";
+  String password="abc123";
+
+  final key1=GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body:Form(
-        key:formkey,
+        key:key1,
         child: Column(
             children: [
         Padding(
@@ -52,7 +55,7 @@ class _Login_StatefulState extends State<Login_Stateful> {
     ),
     ),
     ElevatedButton(onPressed: (){
-      final valid=formkey.currentState!.validate();
+      final valid=key1.currentState!.validate();
       if(valid){
         Navigator.of(context).push(MaterialPageRoute(builder:(context)=>Home()));
       }else{
