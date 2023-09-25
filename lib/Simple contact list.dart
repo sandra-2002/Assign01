@@ -65,7 +65,7 @@ class  ListView1 extends StatelessWidget{
 
           Card(child:
           ListTile(
-              title: Text('Niranjana',style: TextStyle(fontSize:15 )),
+              title: Text('Meenu',style: TextStyle(fontSize:15 )),
               leading: Icon(Icons.account_circle_rounded,
                 color:Colors.red ,
                 size: 40,),
@@ -85,7 +85,7 @@ class  ListView1 extends StatelessWidget{
 
           Card(child:
           ListTile(
-              title: Text('Agneya',style: TextStyle(fontSize:15 )),
+              title: Text('Niranjana',style: TextStyle(fontSize:15 )),
               leading: Icon(Icons.account_circle_rounded,
                 color: Colors.blueAccent,
                 size: 40,),
