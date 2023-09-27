@@ -43,7 +43,8 @@ class ListView2 extends StatelessWidget{
                                     ),
                                 ],
                               ),
-                    leading:Image.asset('asset/images/img.png',)
+                    leading:Image.asset('asset/images/img.png',
+                    )
               ),
           ),
             ),
@@ -69,7 +70,7 @@ class ListView2 extends StatelessWidget{
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left:55),
-                            child: Text('Population:5.54 mill',style: TextStyle(fontSize: 12),),
+                            child: Text('Population:5.54 mill',style: TextStyle(fontSize:12),),
                           )
                         ],
                       ),
@@ -105,7 +106,7 @@ class ListView2 extends StatelessWidget{
                         ],
                       ),
                     ),
-                    leading: Image.asset('asset/images/img_2.png')
+                    leading: Image.asset('asset/images/img_2.png',)
 
                 ),
               ),
@@ -137,40 +138,45 @@ class ListView2 extends StatelessWidget{
                         ],
                       ),
                     ),
-                    leading: Image.asset('asset/images/img_3.png',),
+                    leading: Container(
+                     // height: 50,
+                     // width:200,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                        child: Image.asset('asset/images/img_3.png',fit: BoxFit.fitHeight,)),
                 ),
               ),
             ),
           ),
-          // Container(
-          //   height: 100,
-          //   child: Card(
-          //     color: Colors.orange,
-          //     child: ListTile(
-          //         title: Padding(
-          //           padding: const EdgeInsets.only(left:30),
-          //           child: Column(
-          //             children: [
-          //               Padding(
-          //                 padding: const EdgeInsets.all(8),
-          //                 child: Text('New York',style: TextStyle(fontWeight: FontWeight.bold)),
-          //               ),
-          //               Padding(
-          //                 padding: const EdgeInsets.only(right:35),
-          //                 child: Text('US',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15)),
-          //               ),
-          //               Padding(
-          //                 padding: const EdgeInsets.only(left:45),
-          //                 child: Text('Population:19.8 mill',style: TextStyle(fontSize: 12),),
-          //               )
-          //             ],
-          //           ),
-          //         ),
-          //         leading: Image.asset('asset/images/img_5.png')
-          //
-          //     ),
-          //   ),
-          // ),
+          Container(
+            height: 100,
+            child: Card(
+              color: Colors.orange,
+              child: ListTile(
+                  title: Padding(
+                    padding: const EdgeInsets.only(left:30),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Text('New York',style: TextStyle(fontWeight: FontWeight.bold)),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right:35),
+                          child: Text('US',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15)),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left:45),
+                          child: Text('Population:19.8 mill',style: TextStyle(fontSize: 12),),
+                        )
+                      ],
+                    ),
+                  ),
+                  leading: Image.asset('asset/images/img_6.png')
+              ),
+            ),
+          ),
         ],
       )
     );
