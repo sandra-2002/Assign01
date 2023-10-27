@@ -16,22 +16,22 @@ class Log_Sign extends StatelessWidget {
         children: [
         Image.asset('asset/icons/168104-travel-icon-free-download-png-hq.png',
         width: 300,height: 300,),
-    SizedBox(
+    const SizedBox(
     height: 20,
     ),
     MaterialButton(onPressed: (){
-      Navigator.push((context), MaterialPageRoute(builder: (context)=>Log2()));
+      Navigator.push((context), MaterialPageRoute(builder: (context)=>const Log2()));
     },
     color: Colors.blue,
     shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(30)
     ),
-    child: ListTile(
+    child: const ListTile(
     title: Text('Login Here'),
     trailing: Icon(Icons.people_alt_outlined),
     ),
     ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
     MaterialButton(onPressed: (){
@@ -41,12 +41,12 @@ class Log_Sign extends StatelessWidget {
     shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(30)
     ),
-    child: ListTile(
+    child: const ListTile(
     title: Text('Register Here'),
     trailing: Icon(Icons.person_add_alt_1_outlined),
     ),
     ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
     MaterialButton(onPressed: (){},
@@ -54,12 +54,12 @@ class Log_Sign extends StatelessWidget {
     shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(30)
     ),
-    child: ListTile(
+    child: const ListTile(
     title: Text('Continue with FaceBook'),
       trailing: Icon(Icons.facebook),
     ),
     ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           MaterialButton(onPressed: (){},
@@ -67,7 +67,7 @@ class Log_Sign extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30)
             ),
-            child: ListTile(
+            child: const ListTile(
                 title: Text('Continue with Google'),
                 trailing:Icon(Icons.facebook)),
           ),

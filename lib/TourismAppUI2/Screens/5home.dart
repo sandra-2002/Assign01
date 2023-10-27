@@ -1,8 +1,10 @@
 import 'package:assignment/TourismAppUI2/Data/Dummydata.dart';
+import 'package:assignment/TourismAppUI2/Screens/6details.dart';
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(MaterialApp(debugShowCheckedModeBanner:false,home:Tour_Home1()));
+  runApp(MaterialApp(debugShowCheckedModeBanner:false,
+      home:Tour_Home1()));
 }
 
 class Tour_Home1 extends StatefulWidget {
@@ -45,7 +47,7 @@ class _Tour_Home1State extends State<Tour_Home1> {
                     filled: true,
                     fillColor: Colors.grey[300],
                     hintText: 'Search',
-                    suffixIcon: Icon(Icons.search),
+                    suffixIcon: const Icon(Icons.search),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(2),
                     ),
@@ -58,19 +60,19 @@ class _Tour_Home1State extends State<Tour_Home1> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text('Popular Places',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: TextButton(onPressed: (){}, child: Text('View all',style: TextStyle(color: Colors.black87),)),
+                    child: TextButton(onPressed: (){}, child: const Text('View all',style: TextStyle(color: Colors.black87),)),
                   )
                 ],
               ),
             ),
             SliverGrid(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
               ),
               delegate: SliverChildBuilderDelegate(
@@ -86,7 +88,9 @@ class _Tour_Home1State extends State<Tour_Home1> {
                             child: Stack(children:[
                               ClipRRect(
                                   borderRadius: BorderRadius.circular(15),
-                                  child: Image.network(Places[index]['image'],fit: BoxFit.contain,)),
+                                  child: GestureDetector(
+                                      onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const DetailsPage())),
+                                      child: Image.network(Places[index]['image'],fit: BoxFit.contain,))),
                               Positioned(
                                   left: 10,
                                   top: 10,
@@ -94,7 +98,7 @@ class _Tour_Home1State extends State<Tour_Home1> {
                                     height: 20,
                                     width: 50,
                                     color: Colors.blue,
-                                    child:Text('${Places[index]['price']}',style: TextStyle(
+                                    child:Text('${Places[index]['price']}',style: const TextStyle(
                                       color: Colors.white,fontWeight: FontWeight.bold,
                                     ),textAlign: TextAlign.center,),
                                   )),
@@ -103,7 +107,7 @@ class _Tour_Home1State extends State<Tour_Home1> {
                                 left: 10,
                                 child: Column(
                                   children: [
-                                    Text(Places[index]['name'],style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold
+                                    Text(Places[index]['name'],style: const TextStyle(color: Colors.white,fontWeight: FontWeight.bold
                                     ),),
                                   ],
                                 ),
@@ -125,15 +129,15 @@ class _Tour_Home1State extends State<Tour_Home1> {
         backgroundColor: Colors.lightBlue[200],
         child: ListView(
           children:  [
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.home, color: Colors.black,),
               title: Text('Home'),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.settings_outlined, color: Colors.black,),
               title: Text('Settings'),
             ),
-            Divider(
+            const Divider(
                 height: 100,
                 color: Colors.black,
                 indent: 10,

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 void main(){
-  runApp(MaterialApp(debugShowCheckedModeBanner:false,home: Payment(),));
+  runApp(const MaterialApp(debugShowCheckedModeBanner:false,home: Payment(),));
 }
 
 class Payment extends StatefulWidget {
@@ -16,7 +17,15 @@ class _PaymentState extends State<Payment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Lottie.network('https://i.pinimg.com/originals/32/b6/f2/32b6f2aeeb2d21c5a29382721cdc67f7.gif'),
+      backgroundColor: Colors.green[100],
+        body: Center(
+            child: Column(
+              children: [
+                Lottie.asset('asset/animations/Animation - 1698402598590.json'),
+                const SizedBox(height:5,),
+                Text('Payment Successful !',style: GoogleFonts.albertSans(color: Colors.black87,fontWeight: FontWeight.bold,fontSize: 15),)
+              ],
+            )),
     );
   }
 }

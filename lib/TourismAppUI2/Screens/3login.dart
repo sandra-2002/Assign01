@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main(){
-  runApp(MaterialApp(debugShowCheckedModeBanner: false,home: Log2(),));
+  runApp(const MaterialApp(debugShowCheckedModeBanner: false,home: Log2(),));
 }
 
 class Log2 extends StatefulWidget {
@@ -23,13 +23,13 @@ class _Log2State extends State<Log2> {
             child:Column(
               mainAxisAlignment: MainAxisAlignment.center,
         children:[
-                Image(image: NetworkImage('https://cdn-icons-png.flaticon.com/128/4775/4775283.png'),),
+                const Image(image: NetworkImage('https://cdn-icons-png.flaticon.com/128/4775/4775283.png'),),
                 Text("LOGIN",style: GoogleFonts.albertSans(fontSize: 40,fontWeight: FontWeight.bold),),
-                SizedBox(height: 25,),
+                const SizedBox(height: 25,),
                 TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Username',
-                    prefixIcon: Icon(Icons.account_circle_outlined),
+                    prefixIcon: const Icon(Icons.account_circle_outlined),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(20))
                   ),
                   // validator: (uname){
@@ -40,22 +40,22 @@ class _Log2State extends State<Log2> {
                   //   }
                   // },
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 TextFormField(decoration: InputDecoration(
                   labelText: 'Password',
-                    prefixIcon: Icon(Icons.password),
+                    prefixIcon: const Icon(Icons.password),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(20))
                 ),),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Container(
               height: 40,
               width: 500,
               child: ElevatedButton(onPressed:(){
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Tour_Home1()));
-              }, child:Text('Login'),
+              }, child:const Text('Login'),
                 style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(20)),
-                    textStyle: TextStyle(fontSize: 20) ),
+                    textStyle: const TextStyle(fontSize: 20) ),
           ))
               ]
             ),

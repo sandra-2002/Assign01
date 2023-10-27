@@ -10,12 +10,12 @@ import 'package:flutter/material.dart';
 void main(){
   runApp(MaterialApp(debugShowCheckedModeBanner:false,home: IntroScreen(),
   routes:{ 'login signup':(context)=>Log_Sign(),
-    'login':(context)=>Log2(),
+    'login':(context)=>const Log2(),
     'register':(context)=>Sign(),
     'home':(context)=>Tour_Home1(),
-    'details':(context)=>DetailsPage(),
-    'explore':(context)=>ExploreNow(),
-    'pay':(context)=>Payment(),
+    'details':(context)=>const DetailsPage(),
+    'explore':(context)=>const ExploreNow(),
+    'pay':(context)=>const Payment(),
   }
 
   ));
@@ -28,7 +28,7 @@ class IntroScreen extends StatefulWidget {
 class _IntroScreenState extends State<IntroScreen> {
   @override
   void initState(){
-    Timer(Duration(seconds: 5),() {
+    Timer(const Duration(seconds: 5),() {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context)=>  Log_Sign ()));
     } );

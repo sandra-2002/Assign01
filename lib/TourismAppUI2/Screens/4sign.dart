@@ -1,4 +1,4 @@
-import 'package:assignment/TourismAppUI2/Screens/5home.dart';
+import 'package:assignment/TourismAppUI2/Screens/3login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -26,7 +26,7 @@ class _SignState extends State<Sign> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('SignUp',style:GoogleFonts.albertSans(fontSize: 30,fontWeight: FontWeight.bold),),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             TextField(
               decoration: InputDecoration(
                 hintText: 'Enter Your Name',
@@ -34,7 +34,7 @@ class _SignState extends State<Sign> {
                 border:OutlineInputBorder(borderRadius: BorderRadius.circular(15))
               ),
             ),
-            SizedBox(height:18,),
+            const SizedBox(height:18,),
             TextField(
               decoration: InputDecoration(
                 hintText: 'Phone Number',
@@ -42,7 +42,7 @@ class _SignState extends State<Sign> {
                   border:OutlineInputBorder(borderRadius: BorderRadius.circular(15))
               ),
             ),
-            SizedBox(height: 18,),
+            const SizedBox(height: 18,),
             TextFormField(
               decoration: InputDecoration(
                 hintText: 'UserName',
@@ -57,7 +57,7 @@ class _SignState extends State<Sign> {
                 }
               }
             ),
-            SizedBox(height: 18,),
+            const SizedBox(height: 18,),
             TextFormField(
               decoration: InputDecoration(
                 hintText: 'Enter your Password',
@@ -73,7 +73,7 @@ class _SignState extends State<Sign> {
                 }
               },
             ),
-            SizedBox(height: 18,),
+            const SizedBox(height: 18,),
             TextFormField(
               decoration: InputDecoration(
                 hintText: 'Re-Enter your Password',
@@ -88,7 +88,7 @@ class _SignState extends State<Sign> {
                 }
               },
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Container(
                 height: 40,
                 width: 200,
@@ -97,14 +97,14 @@ class _SignState extends State<Sign> {
                   if (formkey.currentState!.validate()) {
                     if (valid) {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) =>Tour_Home1() ));
+                          builder: (context) =>const Log2()));
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text('Inavlid datas')));
                     }
                   }
                 },
-                  child: Text('SignUp'),
+                  child: const Text('SignUp'),
                   style:ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20),)),))
           ],
         ),

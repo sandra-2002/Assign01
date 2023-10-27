@@ -1,7 +1,8 @@
+import 'package:assignment/TourismAppUI2/Screens/8payment.dart';
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: ExploreNow(),));
 }
@@ -65,37 +66,37 @@ class _ExploreNowState extends State<ExploreNow> {
               color: Colors.white,
               size: 28,),
           ),
-          Positioned(
+          const Positioned(
             bottom: 340,left: 20,
             child: Icon(Icons.star,
               color: Colors.purple,
               size: 28,),
           ),
-          Positioned(
+          const Positioned(
             bottom: 340,left: 50,
             child: Icon(Icons.star,
               color: Colors.purple,
               size: 28,),
           ),
-          Positioned(
+          const Positioned(
             bottom: 340,left: 80,
             child: Icon(Icons.star,
               color: Colors.purple,
               size: 28,),
           ),
-          Positioned(
+          const Positioned(
             bottom: 340,left: 110,
             child: Icon(Icons.star,
               color: Colors.purple,
               size: 28,),
           ),
-          Positioned(
+          const Positioned(
             bottom: 340,left: 140,
             child: Icon(Icons.star,
               color: Colors.grey,
               size: 28,),
           ),
-          Positioned(
+          const Positioned(
             bottom: 310,left: 19,
             child: Icon(Icons.location_on_rounded,
               color: Colors.grey,
@@ -109,16 +110,21 @@ class _ExploreNowState extends State<ExploreNow> {
                   fontSize: 16
               ),),
           ),
-          SizedBox(height:8,),
+          const SizedBox(height:8,),
           Positioned(
               bottom: 260,left: 130,
-              child:Container(
-                height: 45,
-                width: 700,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),color: Colors.purple),
+              child:InkWell(
+                onTap: (){
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>const Payment()));
+                },
+                child: Container(
+                  height: 45,
+                  width: 700,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),color: Colors.purple),
+                ),
               )),
-          Positioned(
+          const Positioned(
             bottom: 274,left: 415,
             child: Text("Book Now",
               style: TextStyle(
@@ -126,7 +132,7 @@ class _ExploreNowState extends State<ExploreNow> {
                   fontSize: 18
               ),),
           ),
-          Positioned(
+          const Positioned(
             bottom: 342,right: 45,
             child: Text("\$100",
               style: TextStyle(
@@ -134,7 +140,7 @@ class _ExploreNowState extends State<ExploreNow> {
                   fontSize: 18
               ),),
           ),
-          Positioned(
+          const Positioned(
             bottom: 320,right: 20,
             child: Text("/per night",
               style: TextStyle(
@@ -142,7 +148,7 @@ class _ExploreNowState extends State<ExploreNow> {
                   fontSize: 16
               ),),
           ),
-          Positioned(
+          const Positioned(
             bottom: 200,left: 15,
             child: Text('Sivan plaza ',
               style: TextStyle(
@@ -151,7 +157,7 @@ class _ExploreNowState extends State<ExploreNow> {
                   fontSize: 19
               ),),
           ),
-          Positioned(
+          const Positioned(
             bottom: 50,left: 15,
             child: Text("Sivan plaza hotel on kochi is ideally located at the shores of kochi kayal"
                 "\n and is a short distance from prime business districts, malls, and airports. "
@@ -163,25 +169,25 @@ class _ExploreNowState extends State<ExploreNow> {
                 " \nEnjoy our complimentary continental breakfast served daily." ),
 
           ),
-          Positioned(
+          const Positioned(
             bottom: 18,left: 289,
             child: Icon(Icons.search,
               color: Colors.purple,
               size: 20,),
           ),
-          Positioned(
+          const Positioned(
             bottom: 18,left: 489,
             child: Icon(Icons.favorite,
               color: Colors.grey,
               size: 20,),
           ),
-          Positioned(
+          const Positioned(
             bottom: 18,left: 689,
             child: Icon(Icons.settings,
               color: Colors.grey,
               size: 20,),
           ),
-          Positioned(
+          const Positioned(
             bottom: 5,left: 289,
             child: Text('search',
               style: TextStyle(
@@ -189,7 +195,7 @@ class _ExploreNowState extends State<ExploreNow> {
                   color: Colors.purple
               ),),
           ),
-          Positioned(
+          const Positioned(
             bottom: 5,left: 489,
             child: Text('favourite',
               style: TextStyle(
@@ -197,7 +203,7 @@ class _ExploreNowState extends State<ExploreNow> {
                   color: Colors.grey
               ),),
           ),
-          Positioned(
+          const Positioned(
             bottom: 5,left: 689,
             child: Text('setting',
               style: TextStyle(
