@@ -91,12 +91,12 @@ class _Music_UI3State extends State<Music_UI3> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left:30),
-                  child: Icon(Icons.download,color: Colors.pink[200],size: 18,),
+                  child: Icon(Icons.download,color: Colors.pink[200],size: 25,),
                 ),
 
                 const Padding(
                   padding: EdgeInsets.only(left:380),
-                  child: Icon(Icons.star_outline,color: Colors.white,size: 18,),
+                  child: Icon(Icons.star_outline,color: Colors.white,size: 25,),
                 ),
               ],
             ),
@@ -120,11 +120,11 @@ class _Music_UI3State extends State<Music_UI3> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left:30),
-                  child: Icon(Icons.volume_mute_sharp,color: Colors.white,size: 18,),
+                  child: Icon(Icons.volume_mute_sharp,color: Colors.white,size: 25,),
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 380),
-                  child: Icon(Icons.queue_music_outlined,color: Colors.white,size: 18,),
+                  child: Icon(Icons.queue_music_outlined,color: Colors.white,size: 25,),
                 )
               ],
             ),

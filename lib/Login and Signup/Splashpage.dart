@@ -22,66 +22,50 @@ class _Stateful_SplashState extends State<Stateful_Splash>{
     super.initState();
     //Navigator.of(context).push(MaterialPageRoute(builder: (context) => Login_Stateful()));
   }
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body:
-        Center(
-          child: Padding(
-            padding: const EdgeInsets.all(90),
-            child: Column(
-              //mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Text("Hello There!",
-                    style: GoogleFonts.averageSans(
-                        fontSize: 30,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:
+      Center(
+        child: Padding(
+          padding: const EdgeInsets.all(90),
+          child: Column(
+            //mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(15),
+                child: Text("Hello There!",
+                  style: GoogleFonts.averageSans(
+                      fontSize: 30,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(height: 10,),
+              Text(
+                  "Automatic identity verification which enable you to verify your identity",
+                  style: GoogleFonts.duruSans(
+                      fontSize: 10,
+                      color: Colors.black54)
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top:50),
+                child: Expanded(
+                  child: Image(image: AssetImage("asset/icons/img.png"),
+                    width:200,
+                    height:200,
                   ),
                 ),
-                SizedBox(height: 10,),
-                Text(
-                    "Automatic identity verification which enable you to verify your identity",
-                    style: GoogleFonts.duruSans(
-                        fontSize: 10,
-                        color: Colors.black54)
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top:50),
-                  child: Expanded(
-                    child: Image(image: AssetImage("asset/icons/img.png"),
-                      width:200,
-                      height:200,
-                    ),
-                  ),
-                ),
-                SizedBox(height:40),
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Container(
-                      width: 250,
-                      height: 40,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginStateful()));
-                        }, child: Text('Login'),
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          backgroundColor: Colors.green,
-                        ),
-                      )),
-                ), //SizedBox(height: 50,),
-                Container(
+              ),
+              SizedBox(height:40),
+              Padding(
+                padding: const EdgeInsets.all(15),
+                child: Container(
                     width: 250,
                     height: 40,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => SignUp()));
-                      },
-                      child: Text('Sign Up'),
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginStateful()));
+                      }, child: Text('Login'),
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
@@ -89,10 +73,26 @@ class _Stateful_SplashState extends State<Stateful_Splash>{
                         backgroundColor: Colors.green,
                       ),
                     )),
-              ],
-            ),
+              ), //SizedBox(height: 50,),
+              Container(
+                  width: 250,
+                  height: 40,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => SignUp()));
+                    },
+                    child: Text('Sign Up'),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      backgroundColor: Colors.green,
+                    ),
+                  )),
+            ],
           ),
         ),
-      );
-    }
+      ),
+    );
+  }
 }

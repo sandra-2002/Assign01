@@ -70,7 +70,7 @@ class GridVieww extends StatelessWidget {
                       names[index],
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: Colors.white,
                         fontSize: 20, // Adjust font size
                         shadows: [
                           Shadow(
