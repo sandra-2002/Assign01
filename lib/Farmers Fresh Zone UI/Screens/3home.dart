@@ -25,6 +25,17 @@ class _HomeeState extends State<Homee> {
     'PACKED FLAVORS',
     'GOURMET SALADS'
   ];
+  var img=[
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwszK4pR6R5adWAxVzYN0f7HscqeU21g--mQ&usqp=CAU',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMcKnkjU6Flrtc-Vjd0uzSmNv68h-duaITvw&usqp=CAU',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+  ];
+
    bool isSelected=false;
   void ShowSheet(BuildContext context){
     showModalBottomSheet(context: context, builder:(BuildContext context){
@@ -200,6 +211,7 @@ class _HomeeState extends State<Homee> {
                 ),
               ),
           ),
+          /// horizontal slider
           SliverToBoxAdapter(
             child:
           Container(
@@ -223,77 +235,118 @@ class _HomeeState extends State<Homee> {
               },
             ),
           ),),
-          SliverList(delegate: SliverChildBuilderDelegate(childCount: 1,(context, index) =>
-              Padding(
-                padding: const EdgeInsets.only(top:10),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    CarouselSlider(items: [
-                      Container(
-                       // width: double.infinity,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(image:NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZHmh1bnaacMh2boiGQyFYxxpoe544Db5JnRuFYkfQ58e7G14_1IlYmiuIm_BH0LIRcEA&usqp=CAU',
-                          ),//fit: BoxFit.fitWidth,
-                          )
-                        ),
-                      ),
-                      Container(
-                      //  width: double.infinity,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(image:NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRezUuWkXcCWjZTNoAxh-7qtYSzr8jqCvT8dg&usqp=CAU',
-                            ),//fit: BoxFit.fitWidth,
-                               )
-                        ),
-                      ),
-                      Container(
-                       // width: double.infinity,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(image:NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGlJtSv7NGEiiBObWkzSRtFdHdBEbNvx4q7Q&usqp=CAU',
-                            ),//fit: BoxFit.fitWidth,
-                            )
-                        ),
-                      ),
-                      Container(
-                       // width: double.infinity,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(image:NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4c5DXnkj43NKrnqU-EjFy9_GNBi08LO8ydg&usqp=CAU',
-                            ),//fit: BoxFit.fitWidth
-                            )
-                        ),
-                      ),
-                      Container(
-                        //width: double.infinity,
-                       // margin:EdgeInsets.symmetric(vertical: 20) ,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(image:NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRagdjwCpsUZp55O8QaXq_yebkuLFuJqNboiQ&usqp=CAU',
-                            ),//fit: BoxFit.fitWidth,
-                            )
-                        ),
-                      )
-                    ],
-                        options:CarouselOptions(
-                          autoPlayInterval: Duration(seconds:5),
-                          enableInfiniteScroll: true,
-                          scrollDirection: Axis.horizontal,
-                          autoPlayAnimationDuration: Duration(seconds: 2),
-                          autoPlay: true,
-                          viewportFraction:1,
-                          aspectRatio: 16/9
-                        ) ),
+          /// Corousal slider
+          SliverList(
+              delegate: SliverChildBuilderDelegate((context, index) =>
+                  CarouselSlider(items: [
                     Container(
-                      width: 800,
-                      height: 150,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.green),
-                        borderRadius: BorderRadius.circular(12),
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(image: NetworkImage(
+                            'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY4fHx2ZWdldGFibGVzJTIwYW5kJTIwZnJ1aXRzJTIwJTIwY29yb3VzYWxwaWNzJTIwJTIwaW4lMjBhcHBzfGVufDB8fDB8fHww'),
+                            fit: BoxFit.cover)
+                        , ),
+
+                    ),
+                    Container(
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(image: NetworkImage(
+                              'https://images.unsplash.com/photo-1458917524587-d3236cc8c2c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHZlZ2V0YWJsZXMlMjBjb3JvdXNhbCUyMHNsaWRlcnxlbnwwfHwwfHx8MA%3D%3D'),
+                              fit: BoxFit.cover)
                       ),
-                    )
+                    ),
+                    Container(
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(image: NetworkImage(
+                              'https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=1284&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+                              fit: BoxFit.cover)
+                      ),
+                    ),
+                    Container(
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(image: NetworkImage(
+                              'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fHZlZ2V0YWJsZXMlMjBjb3JvdXNhbCUyMHNsaWRlcnxlbnwwfHwwfHx8MA%3D%3D'),
+                              fit: BoxFit.cover)
+                      ),
+                    ),
+                  ], options: CarouselOptions(
+                      autoPlay: true,
+                      viewportFraction: 1,
+                      height: 200,
+                      enableInfiniteScroll: true,
+                      autoPlayAnimationDuration: const Duration(seconds: 2)
+                  )),
+                  childCount: 1
+              ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.all(15),
+              child: Container(
+                width: 500,
+                    height: 110,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.green),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                child: const Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(15),
+                      child: Column(
+                        children: [
+                          Image(image: NetworkImage('https://cdn-icons-png.flaticon.com/128/11086/11086374.png'),height: 50,width: 50,),
+                          SizedBox(height: 10,),
+                          Text('30 MINS POLICY',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12)),
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 300,),
+                    Padding(
+                      padding: EdgeInsets.all(15),
+                      child: Column(
+                        children: [
+                          Image(image: NetworkImage('https://cdn-icons-png.flaticon.com/128/7214/7214338.png'),height: 50,width: 50,),
+                          SizedBox(height: 10,),
+                          Text('TRACEABILITY',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12)),
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 300,),
+                    Padding(
+                      padding: EdgeInsets.all(15),
+                      child: Column(
+                        children: [
+                          Image(image: NetworkImage('https://cdn-icons-png.flaticon.com/128/7417/7417717.png'),height: 50,width: 50,),
+                          SizedBox(height: 10,),
+                          Text('LOCAL SOURCING',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-              ),),)
-        ],
-      ),
+              ),
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: Text('Shop by Category',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+          ),
+          // SliverList(delegate: SliverChildBuilderDelegate(childCount: 8,(BuildContext context,int index) {
+          //   if (index==0){
+          //     return GridView.builder(gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
+          //       mainAxisSpacing: 10,crossAxisCount: 3,crossAxisSpacing: 10
+          //     ), itemBuilder:(BuildContext context , int gridindex){
+          //           return Card(
+          //             child: Column(
+          //               children: [
+          //                 Image.network(img[gridindex])
+          //               ],
+          //             ),
+          //           );
+          //     });
+          //   }
+          // })),
+                  ],
+                ),
     );
   }
 }
