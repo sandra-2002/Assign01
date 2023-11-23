@@ -330,21 +330,21 @@ class _HomeeState extends State<Homee> {
           const SliverToBoxAdapter(
             child: Text('Shop by Category',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
           ),
-          // SliverList(delegate: SliverChildBuilderDelegate(childCount: 8,(BuildContext context,int index) {
-          //   if (index==0){
-          //     return GridView.builder(gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
-          //       mainAxisSpacing: 10,crossAxisCount: 3,crossAxisSpacing: 10
-          //     ), itemBuilder:(BuildContext context , int gridindex){
-          //           return Card(
-          //             child: Column(
-          //               children: [
-          //                 Image.network(img[gridindex])
-          //               ],
-          //             ),
-          //           );
-          //     });
-          //   }
-          // })),
+          SliverList(delegate: SliverChildBuilderDelegate(childCount: 8,(BuildContext context,int index) {
+            if (index==0){
+              return GridView.builder(gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
+                mainAxisSpacing: 10,crossAxisCount: 3,crossAxisSpacing: 10
+              ), itemBuilder:(BuildContext context , int gridindex){
+                    return Card(
+                      child: Column(
+                        children: [
+                          Image.network(img[gridindex])
+                        ],
+                      ),
+                    );
+              });
+            }
+          })),
                   ],
                 ),
     );
